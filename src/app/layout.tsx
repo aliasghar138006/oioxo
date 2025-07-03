@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const arialFont = localFont({
+  src:"../../public/fonts/ARIAL.ttf",
+  weight:"400"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={arialFont.className}
       >
         {children}
       </body>
