@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "@templates/MainPage.module.css";
 import Image from "next/image";
 import generateImage from "@images/first-picture.png";
@@ -17,11 +17,27 @@ import Card from "../modules/Card";
 
 
 function MainPage() {
+  const containerRef = useRef(null)
+  const [viewBox , setViewBox] = useState('0 0 0 0')
   const [boxSelect , setBoxSelect] = useState<object>({
     generate : false,
     hosting :false,
     upgrade :false
   });
+
+  useEffect(() => {
+    const updateSize = () => {
+      if(containerRef.current) {
+        const {offsetWidth:w , offsetHeight:h} = containerRef.current;
+        setViewBox(`0 0 ${w} ${h}`)
+      }
+    }
+
+    updateSize();
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  } , [])
 
   const clickHandler = (name:string) :void => {
     const newItem = {
@@ -40,7 +56,7 @@ function MainPage() {
      <HeadBtn text="How it works" />
      <Title title="The Easiest Way to Build a Website" description="AI-generated, fully customizable, and instantly publishable — even without tech skills." />
 
-      <div className={styles.svggenerate}>
+      <div ref={containerRef} className={styles.svggenerate}>
         <div className={styles.generate}>
           <Step
             title={"Generate with AI — Then Customize"}
@@ -81,7 +97,7 @@ function MainPage() {
              
 
         </div>
-        <svg viewBox="0 0 1200 900" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <svg className={styles.bigsize} viewBox={viewBox} preserveAspectRatio="none" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="myGradient" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#330DDC" />
@@ -134,6 +150,60 @@ function MainPage() {
 
           <circle cx="155" cy="880" r="7" fill="#F38831" />
         </svg>
+
+        {Number(viewBox.split(" ")[2]) < 576 && <svg viewBox={viewBox} preserveAspectRatio="none" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="myGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#330DDC" />
+              <stop offset="50%" stopColor="#B547FF" />
+              <stop offset="100%" stopColor="#F38831" />
+              
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="30" r="7" fill="#F38831" />
+
+          <path
+            d="
+      M600,35
+      L600,70
+      A15,15 0 0 1 590,85
+      L80,85
+      A15,15 0 0 0 70,95
+      L70,350
+      A15,15 0 0 0 85,365
+      L885,365
+      A15,15 0 0 1 900,380
+      L900,500
+    "
+            fill="none"
+            stroke="url(#myGradient)"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+
+          <circle cx="900" cy="500" r="7" fill="#F38831" />
+
+          {/* section 2 */}
+          <circle cx="900" cy="700" r="7" fill="#320DDC" />
+
+          <path
+            d="
+      M900,700
+      L900,800
+      A15,15 0 0 1 885,815
+      L165,815
+      A15,15 0 0 0 155,830
+      L155,880
+      
+    "
+            fill="none"
+            stroke="url(#myGradient)"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+
+          <circle cx="155" cy="880" r="7" fill="#F38831" />
+        </svg>}
 
        
       </div>

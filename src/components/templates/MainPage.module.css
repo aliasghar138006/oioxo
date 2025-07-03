@@ -147,10 +147,10 @@
 .svggenerate svg {
     position: absolute;
     background-image: url("../../../public/images/Mask.png");
-    top: -200px;
+    top: -50px;
     margin: auto;
     
-    height: 200vh;
+    /* height: 200vh; */
    
 }
 
@@ -170,6 +170,11 @@
     margin-left: 10%;
     margin-top: 70px;
 }
+
+/* .generate:nth-child(1) img {
+    position: absolute;
+    top: 0;
+} */
 .generate p {
     float: right;
     width: 200px;
@@ -185,15 +190,13 @@
     
 }
 
-/* .svggenerate svg {
-    position: relative;
-    background-image: url("../../../public/images/Mask.png");
-    top: -200px;
-    margin: auto;
-    
-    height: 200vh;
-   
-} */
+.generate img {
+    margin-bottom: 50px;
+}
+
+.bigsize {
+    display: none;
+}
 
 .circleitem {
     width: 72px;
