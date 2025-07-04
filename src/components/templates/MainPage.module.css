@@ -59,14 +59,21 @@
     margin-top: 20px;
 }
 
-.generate {
-    display: flex;
+.generate:nth-child(1) {
     position: relative;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
     margin: auto;
     margin-top: 50px;
+    
+}
+
+
+
+.generate:nth-child(1) img {
+    position: absolute;
+    top: -20;
+    right: -50;
+
 }
 
 .generate:nth-child(2) {
@@ -75,23 +82,24 @@
     align-items: center;
     width: 80%;
     margin: auto;
-    margin-top: 70px;
+    
+  
     
 }
 
 
-.generate:nth-child(3) {
+.generate:last-child {
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     margin: auto;
-    margin-top: 70px;
+    
 }
 
 
 .generate p {
-    width: 551px;
     margin-top: 20px;
     color: #314158;
 }
@@ -144,10 +152,10 @@
     
 }
 
-.svggenerate svg {
-    position: absolute;
+.svggenerate {
+    
     background-image: url("../../../public/images/Mask.png");
-    top: -50px;
+ 
     margin: auto;
     
     /* height: 200vh; */
@@ -163,6 +171,18 @@
     margin-top: 70px;
 }
 
+.generate:nth-child(1) img {
+    position: relative;
+    top: -20;
+    right: 0;
+
+}
+
+.generate:nth-child(2) img {
+  margin-right: 50px;
+
+}
+
     .generate:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -171,43 +191,33 @@
     margin-top: 70px;
 }
 
-/* .generate:nth-child(1) img {
-    position: absolute;
-    top: 0;
-} */
-.generate p {
-    float: right;
-    width: 200px;
-    margin-top: 20px;
-    color: #314158;
-}
-
-.generate h3 {
-    font-size: 22px;
-    width: 200px;
-    color: #041E49;
-    font-weight: 400;
+.generate:last-child {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
     
 }
+
+
+
+
+
+
+
+
+
 
 .generate img {
     margin-bottom: 50px;
 }
 
-.bigsize {
-    display: none;
-}
 
-.circleitem {
-    width: 72px;
-    height: 72px;
-    background-image: linear-gradient(135deg ,#9747FF , #C2C8FF , #5BD3FF , #0DDCAA) ;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    margin-right: 30px;
-    
-}
+
+
 }
 
 
