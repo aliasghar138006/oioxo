@@ -1,4 +1,6 @@
-
+.container {
+    margin-top: 10px;
+}
 
 .start {
     background: linear-gradient(white, white) padding-box,

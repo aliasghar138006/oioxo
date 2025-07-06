@@ -277,4 +277,20 @@
     }
 }
 
+@media (max-width : 1133px) {
+    #boxtwo {
+        
+        position: relative;
+    }
+}
+
+@media (max-width : 1141px) {
+    .generate:nth-child(1) {
+        display: flex;
+    }
+    .generate:nth-child(1) img {
+        position: relative;
+    }
+}
+
 

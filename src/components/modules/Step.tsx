@@ -13,7 +13,7 @@ interface step_obj {
 
 const Step:FC<step_obj> = ({ title, description, number , startBtn=false }) => {
   return (
-    <div id={number == "01" ? styles.back : ""} className={`flex ${number == "02" ? 'md:absolute right-[-15%]' : ''}`}>
+    <div id={number == "01" ? styles.back : styles.boxtwo} className={`flex ${number == "02" ? 'md:absolute md:right-[-15%]' : ''}`}>
       <CircleItem number={number} />
       <div style={number == "03" ? {width:"71%"}:{}}  className="md:w-[60%] w-[50%]">
         <h3>{title}</h3>
