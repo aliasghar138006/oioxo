@@ -10,7 +10,7 @@ import { TbCurrencyDollar } from "react-icons/tb";
 interface card_data {
     clickHandler: (name:string) => void,
     title:string,
-    boxSelect:{generate:boolean , hosting:boolean , upgrade:boolean},
+    boxSelect:{generate:boolean , hosting:boolean , upgrade:boolean} | any,
     icon : string,
     account : string,
     text : string,
