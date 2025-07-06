@@ -4,7 +4,8 @@ import Item from "../elements/Item"
 import BasicIcon from "@images/basic.png"
 import StandardIcon from "@images/standard.png"
 import { FC, useState} from "react"
-import { text } from "stream/consumers"
+import { TbCurrencyDollar } from "react-icons/tb";
+
 
 interface card_data {
     clickHandler: (name:string) => void,
@@ -36,7 +37,7 @@ const Card:FC<card_data> = ({clickHandler , boxSelect , title , icon , account ,
  
   return (
   <div style={{padding:"2px" , marginTop:"10px"}} className={` rounded-2xl h-fit ${boxSelect[title] && "bg-linear-to-r from-[#330DDC] via-[#B547FF] to-[#F38831]"}`}>
-      <div onClick={() => clickHandler(title)} style={{padding:"70px 30px"}} className={`h-fit rounded-2xl shadow-lg bg-white`}>
+      <div onClick={() => clickHandler(title)} style={{padding:"70px 40px 30px 30px"}} className={`h-fit rounded-2xl shadow-lg bg-white`}>
             <div className="flex items-center">
               <Image width={44} height={44} src={icon == "basic" ? BasicIcon : StandardIcon} alt="basic" />
               <span style={{marginLeft:"10px"}} className="font-bold">{account}</span>
@@ -45,8 +46,8 @@ const Card:FC<card_data> = ({clickHandler , boxSelect , title , icon , account ,
               <div style={{marginTop:"10px"}} className="text-[#606060]">{text}</div>
               <div style={{padding:"4px 16px"}} className="bg-radial-[at_50%_75%] from-[#ECB4D0] via-[#FFC4AB] to-[#F9E3B0] to-90% rounded-2xl text-[12px]">UP to $ {discount} discount</div>
             </div>
-            <div style={{marginTop:"10px"}} className="flex items-center justify-between">
-              <div>$ <span className="font-bold">{price}</span> <span className="text-[#5E6470]">/Annually</span></div>
+            <div style={{marginTop:"10px"}} className="block md:flex items-center justify-between">
+              <div className="flex items-center text-[22px]"> <TbCurrencyDollar /> <span className="font-bold text-[32px]">{price}</span> <span className="text-[#5E6470] text-[20px]">/Annually</span></div>
               <div style={{marginRight:"15px"}} className="text-[#BA8803] text-[12px]">Taxt Included</div>
             </div>
             <h3 className="font-bold">What’s included</h3>

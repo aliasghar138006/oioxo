@@ -9,19 +9,21 @@ import CircleItem from "@elements/CircleItem";
 import Step from "../modules/Step";
 import HeadBtn from "../elements/HeadBtn";
 import Title from "../elements/Title";
-import BasicIcon from "@images/basic.png"
-import TrueIcon from "@images/true.png"
-import FalseIcon from "@images/false.png"
-import Item from "../elements/Item";
 import Card from "../modules/Card";
 import TopPolyLine from "../modules/TopPolyLine";
 import EndPolyLine from "../modules/EndPolyLine";
+
+interface boxData {
+    generate : boolean,
+    hosting :boolean,
+    upgrade :boolean
+}
 
 
 function MainPage() {
   
 
-  const [boxSelect , setBoxSelect] = useState<object>({
+  const [boxSelect , setBoxSelect] = useState<boxData>({
     generate : false,
     hosting :false,
     upgrade :false
@@ -30,7 +32,7 @@ function MainPage() {
 
 
   const clickHandler = (name:string) :void => {
-    const newItem = {
+    const newItem:boxData | any = {
       generate : false,
     hosting :false,
     upgrade :false
@@ -44,15 +46,17 @@ function MainPage() {
    
      <div className={styles.container}>
      <HeadBtn text="How it works" />
-     <Title title="The Easiest Way to Build a Website" description="AI-generated, fully customizable, and instantly publishable — even without tech skills." />
+     <Title circle={true} title="The Easiest Way to Build a Website" description="AI-generated, fully customizable, and instantly publishable — even without tech skills." />
 
       <div className={styles.svggenerate}>
         <div className={styles.generate}>
           <TopPolyLine>
             <Step
+            startBtn={false}
             title={"Generate with AI — Then Customize"}
             description={
-              "Tell us what your website is about — your purpose, goals, and features. Our AI instantly builds a complete website for you. Then, fine-tune it using our easy-to-use visual editor — no coding needed. 🎨 Edit colors, layout, text, and images right in your browser."
+              `Tell us what your website is about — your purpose, goals, And features.\n Our AI instantly builds a complete website for you.\n Then, fine-tune it using our easy-to-use visual editor — no coding needed.
+🎨 Edit colors, layout, text, and images right in your browser.`
             }
             number={"01"}
           />
@@ -69,9 +73,10 @@ function MainPage() {
          <div className={styles.generate}>
           <Image width={500} height={311} src={hostingImage} alt="generate" />
           <Step
+          startBtn={false}
             title={"Choose Hosting — Download or Go Live"}
             description={
-              "You can download your website and host it anywhere,or get instant hosting and a custom domain from us — already installed and ready. 🚀 One-click publishing with built-in security and speed."
+              "You can download your website and host it anywhere,\nor get instant hosting and a custom domain from us — already installed and ready.\n 🚀 One-click publishing with built-in security and speed."
             }
             number={"02"}
           />
@@ -81,7 +86,7 @@ function MainPage() {
           <Step
             title={"Upgrade to Pro — Launch Your Online Store"}
             description={
-              "Need a full business setup? We’ll turn your site into a powerful online store — fully managed by us. 🛒 E-commerce, analytics, user management, SEO, and updates — all included."
+              "Need a full business setup?\n We’ll turn your site into a powerful online store — fully managed by us.\n 🛒 E-commerce, analytics, user management, SEO, and updates — all included."
             }
             number={"03"}
             startBtn={true}
@@ -106,9 +111,9 @@ function MainPage() {
       </div>
        <div className="">
          <HeadBtn text="Our Strong Elite Plan" />
-        <Title title="Choose the Plan That Fits You Best" description="Flexible pricing designed to grow with your needs — whether you're just starting out or scaling up." />
+        <Title circle={false} title="Choose the Plan That Fits You Best" description="Flexible pricing designed to grow with your needs — whether you're just starting out or scaling up." />
     {/* Plan */}
-        <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-2 items-center">
+        <div style={{padding:"50px 10px"}} className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 items-center">
          
 
           <Card title="generate" clickHandler={clickHandler} boxSelect={boxSelect} icon={"basic"} account="Basic" text="Buy Per Site" discount="8" price="10-40" falseIndex={["5" , "6"]}/>

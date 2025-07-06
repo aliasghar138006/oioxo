@@ -3,7 +3,7 @@
 .start {
     background: linear-gradient(white, white) padding-box,
               linear-gradient(to left, rgba(51, 13, 220, 1), rgba(181, 71, 255, 1) , rgba(243, 136, 49, 1)) border-box;
-    width: 53%;
+    width: 69%;
     height: 100px;
     border-right: 2px solid rgba(51, 13, 220, 1);
     border-bottom: 2px solid transparent;
@@ -47,4 +47,19 @@
     position: absolute;
     bottom: -5px;
     left: -8px;
+}
+
+@media (max-width : 576px) {
+    .start {
+        width: 40%;
+        margin-left: 25%;
+    }
+
+    .middle {
+        margin-left: 24%;
+    }
+
+    .container {
+        margin: 50px 0px;
+    }
 }

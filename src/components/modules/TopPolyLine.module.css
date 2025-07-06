@@ -24,26 +24,35 @@
 }
 
 .middle {
-    background: linear-gradient(white, white) padding-box,
+    background-size: cover;
+    background: linear-gradient(white , white) padding-box,
               linear-gradient(to right, rgba(51, 13, 220, 1), rgba(181, 71, 255, 1),rgba(243, 136, 49, 1)) border-box;
-    width: 70%;
+    width: 90%;
+    overflow: hidden;
     height: fit-content;
     border-left: 2px solid rgba(51, 13, 220, 1);
     border-bottom: 2px solid transparent;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    margin-top: -2px;
-    padding: 10px;
+    margin-top: -3px;
+    /* padding: 50px; */
 }
+
+
+
+
+
+
 
 .end {
     
-    width: 70.5%;
+    width: 90.5%;
     height: 100px;
     border-right: 2px solid rgba(243, 136, 49, 1);
     border-top-right-radius: 10px;
     position: relative;
-    margin-top: -2px;
+    margin-top: -3px;
+    /* margin-left: 2px; */
 }
 
 
@@ -55,4 +64,19 @@
     position: absolute;
     right: -8;
     bottom: -10;
+}
+
+
+@media (max-width : 576px) {
+    .middle {
+        width: 100%;
+        margin-top: -7px;
+        padding: 30px;
+    }
+
+    .end {
+        width: 100%;
+        margin-top: -3px;
+        margin-left: 2px;
+    }
 }
