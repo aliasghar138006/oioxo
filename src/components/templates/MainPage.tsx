@@ -61,8 +61,8 @@ function MainPage() {
             number={"01"}
           />
           </TopPolyLine>
-          <div style={{paddingTop:"20%"}}>
-            <div className="md:absolute top-[45%] rounded-full left-[75%] w-[240px] h-[16px] bg-[#1B1DAF] lg:opacity-70 opacity-0 blur-xl"></div>
+          <div id={styles.imgbox}>
+            <div className="md:absolute top-[65%] rounded-full left-[75%] w-[240px] h-[16px] bg-[#1B1DAF] lg:opacity-70 opacity-0 blur-xl"></div>
             <Image
               width={374}
               height={331}

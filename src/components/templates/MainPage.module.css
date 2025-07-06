@@ -291,6 +291,10 @@
     .generate:nth-child(1) img {
         position: relative;
     }
+
+    #imgbox {
+        padding-top: 20%;
+    }
 }
 
 
