@@ -62,6 +62,7 @@ function MainPage() {
           />
           </TopPolyLine>
           <div>
+            <div className="md:absolute top-[65%] rounded-full left-[75%] w-[240px] h-[16px] bg-[#1B1DAF] sm:opacity-70 opacity-0 blur-xl"></div>
             <Image
               width={374}
               height={331}
@@ -109,11 +110,11 @@ function MainPage() {
 
       
       </div>
-       <div className="">
+       <div style={{paddingTop:"7%"}} className="">
          <HeadBtn text="Our Strong Elite Plan" />
         <Title circle={false} title="Choose the Plan That Fits You Best" description="Flexible pricing designed to grow with your needs — whether you're just starting out or scaling up." />
     {/* Plan */}
-        <div id={styles.boxcontainer} className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 items-center">
+        <div id={styles.boxcontainer} className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 items-center">
          
 
           <Card title="generate" clickHandler={clickHandler} boxSelect={boxSelect} icon={"basic"} account="Basic" text="Buy Per Site" discount="8" price="10-40" falseIndex={["5" , "6"]}/>

@@ -85,6 +85,7 @@
     /* background-color: red; */
     background-image: url("../../../public/images/Mask.png");
     background-size: cover;
+    
 }
 
 #boxcontainer {
@@ -188,7 +189,6 @@
 .svggenerate {
     
     background-image: url("../../../public/images/Mask.png");
- 
     margin: auto;
     
     
@@ -229,7 +229,7 @@
 }
 
 
-    .generate:nth-child(2) {
+.generate:nth-child(2) {
     display: flex;
     flex-direction: column;
     width: 90%;

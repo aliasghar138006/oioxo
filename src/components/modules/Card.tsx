@@ -47,7 +47,7 @@ const Card:FC<card_data> = ({clickHandler , boxSelect , title , icon , account ,
               <div style={{padding:"4px 16px"}} className="bg-linear-to-l from-[#F9E3B0] from-13% via-[#FFC4AB] via-42% to-[#ECB4D0] to-87% rounded-2xl text-[12px]">UP to $ {discount} discount</div>
             </div>
             <div style={{marginTop:"10px"}} className="block md:flex items-center justify-between">
-              <div className="flex items-center text-[22px]"> <TbCurrencyDollar /> <span className="font-bold text-[32px]">{price}</span> <span className="text-[#5E6470] text-[20px]">/Annually</span></div>
+              <div className="flex items-center text-[22px]"> <TbCurrencyDollar /> <span className="font-bold text-[22px]">{price}</span> <span className="text-[#5E6470] text-[20px]">/Annually</span></div>
               <div style={{marginRight:"15px"}} className="text-[#BA8803] text-[12px]">Taxt Included</div>
             </div>
             <h3 className="font-bold">What’s included</h3>
