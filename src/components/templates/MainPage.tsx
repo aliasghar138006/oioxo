@@ -91,7 +91,7 @@ function MainPage() {
             number={"03"}
             startBtn={true}
           />
-          <Image width={500} height={311} src={upgradeImage} alt="generate" />
+          <Image width={400} height={311} src={upgradeImage} alt="generate" />
              
 
         </div>
@@ -113,7 +113,7 @@ function MainPage() {
          <HeadBtn text="Our Strong Elite Plan" />
         <Title circle={false} title="Choose the Plan That Fits You Best" description="Flexible pricing designed to grow with your needs — whether you're just starting out or scaling up." />
     {/* Plan */}
-        <div style={{padding:"50px 10px"}} className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 items-center">
+        <div id={styles.boxcontainer} className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 items-center">
          
 
           <Card title="generate" clickHandler={clickHandler} boxSelect={boxSelect} icon={"basic"} account="Basic" text="Buy Per Site" discount="8" price="10-40" falseIndex={["5" , "6"]}/>

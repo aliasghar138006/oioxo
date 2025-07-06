@@ -35,7 +35,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-top: -3px;
-    /* padding: 50px; */
+    
 }
 
 
@@ -52,7 +52,7 @@
     border-top-right-radius: 10px;
     position: relative;
     margin-top: -3px;
-    /* margin-left: 2px; */
+   
 }
 
 
@@ -69,13 +69,13 @@
 
 @media (max-width : 576px) {
     .middle {
-        width: 100%;
+        width: 95%;
         margin-top: -7px;
-        padding: 30px;
+       
     }
 
     .end {
-        width: 100%;
+        width: 95%;
         margin-top: -3px;
         margin-left: 2px;
     }

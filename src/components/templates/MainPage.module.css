@@ -87,6 +87,10 @@
     background-size: cover;
 }
 
+#boxcontainer {
+    padding: 50px 40px;
+}
+
 .generate:nth-child(1) div {
    
   
@@ -145,6 +149,7 @@
     position: relative;
     /* left: -100px; */
     margin-right: 30px;
+    margin-top: 15px;
     
 }
 
@@ -214,13 +219,13 @@
 
 .generate:nth-child(2) img {
     position: absolute;
-    top: -250px;
+    top: -240px;
   margin-right: 50px;
 
 }
 
 #back {
-    padding: 30px;
+    padding: 20px;
 }
 
 
@@ -255,6 +260,9 @@
 
 .generate img {
     margin-bottom: 50px;
+}
+#boxcontainer {
+    padding: 50px 10px;
 }
 
 

@@ -15,7 +15,7 @@ const Item:FC<item_check> = ({isTrue , text}) => {
         <div style={{marginTop:"10px"}} className=''>
                   <Image width={32} height={32} src={isTrue ? TrueIcon : FalseIcon} alt="check" />
                 </div>
-                <div style={{marginLeft:"15px"}} className="text-[#404040] font-bold">
+                <div style={{marginLeft:"15px"}} className="text-[#404040] text-[16px] font-bold">
                   {text}
                 </div>
     </div>
